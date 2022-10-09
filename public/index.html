@@ -146,7 +146,16 @@
       
       <script>
 	setInterval(() => {
-        location.reload()
+         	$.ajax({
+            url: `https://${window.location.host}/loli`,
+            global: true,
+            type: 'GET',
+            async: false,
+            success: function (response) {
+            	$(".container").append(`<img class="materialboxed z-depth-4 responsive-img hvr-bob" width="650" alt="loli" src="${response.url}" />`);
+            }
+        });
+        // location.reload()
 	}, 10000)
         $(document).ready(function(){
           $('.materialboxed').materialbox();
