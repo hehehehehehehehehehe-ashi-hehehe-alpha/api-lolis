@@ -146,18 +146,18 @@
       
       <script>
 	setInterval(async () => {
-	$("body > div > div > img").fadeIn(700)
          $.ajax({
             url: `https://${window.location.host}/loli`,
             global: true,
             type: 'GET',
             async: false,
             success: function (response) {
+		$("body > div > div > img").fadeIn(700)
             	$("body > div > div > img").attr("src", response.url);
 		$("body > div > div > img").delay(5000).fadeOut(700)
             }
         });
-	}, 6000)
+	}, 5800)
         $(document).ready(function(){
           $('.materialboxed').materialbox();
         });
