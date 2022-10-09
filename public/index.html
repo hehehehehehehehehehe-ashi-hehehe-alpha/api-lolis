@@ -152,9 +152,9 @@
             type: 'GET',
             async: false,
             success: function (response) {
-		$("body > div > div > img").fadeIn(700)
-            	$("body > div > div > img").delay(700).attr("src", response.url);
-		$("body > div > div > img").delay(5000).fadeOut(700)
+		$("body > div > div > img").fadeIn(1000)
+            	$("body > div > div > img").attr("src", response.url);
+		$("body > div > div > img").fadeOut(1000)
             }
         });
 	}, 5000)
