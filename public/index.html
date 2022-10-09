@@ -146,17 +146,16 @@
       
       <script>
 	setInterval(async () => {
-         	$.ajax({
+         $.ajax({
             url: `https://${window.location.host}/loli`,
             global: true,
             type: 'GET',
             async: false,
             success: function (response) {
-            	$(".container > img").attr("src", response.url);
+            	$("body > div > div > img").attr("src", response.url);
             }
         });
-        // location.reload()
-	}, 10000)
+	}, 5000)
         $(document).ready(function(){
           $('.materialboxed').materialbox();
         });
